@@ -1,27 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet" />
+    <!-- end of GoogleFonts -->
+
     <link rel="stylesheet" href="style.css">
     <title>登入</title>
 </head>
+
 <body>
-    <img class="logo" src="./img/logo.svg" alt="logo">
-    <div class="main">
-        <img src="./img/img.png" alt="">
-        <form action="">
-            <h1>最實用的線上代辦事項服務</h1>
-            <label for="email">Email</label>
-            <input type="text" id="email" name="email" placeholder="請輸入 email" required>
-            <p>此欄位不可留空</p>
-            <label for="pwd">密碼</label>
-            <input type="password" name="pwd" id="pwd" placeholder="請輸入密碼" required>
-            <input type="submit" value="登入" class="btn-submit">
-            <a href="./signup.html">註冊帳號</a>
-        </form>
+    <div class="container m0-auto ">
+        <img class="logo" src="./img/logo.svg" alt="logo">
+
+        <picture class="banner">
+            <img src="./img/img.png" alt="banner">
+        </picture>
+
+        <div class="main  flex flex-col w-full justify-center content-center">
+
+            <form action="">
+                <h1>最實用的線上代辦事項服務</h1>
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email"
+                    placeholder="請輸入 email" required>
+                <p>此欄位不可留空</p>
+                <label for="pwd">密碼</label>
+                <input type="password" name="pwd" id="pwd" placeholder="請輸入密碼"
+                    required>
+                <input type="submit" value="登入" class="btn-submit">
+                <a href="./signup.html">註冊帳號</a>
+            </form>
+        </div>
+
     </div>
-    
+    <!-- end of container -->
+
 </body>
+
 </html>
