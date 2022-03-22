@@ -1,0 +1,474 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.selector-for-some-widget {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background: #FFD370;
+  font-family: "Noto Sans TC";
+  margin: 0 auto;
+  width: 70%;
+}
+
+img {
+  width: 100%;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header {
+  width: 386px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 576px) {
+  header {
+    width: 100%;
+  }
+}
+
+header h1 {
+  margin-bottom: 21px;
+}
+
+header h1 a {
+  width: 313px;
+  height: 47px;
+  background: url(../img/logo_lg.svg) no-repeat;
+  display: block;
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@media (max-width: 576px) {
+  .workImg {
+    display: none;
+  }
+}
+
+.login_page {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 87px auto;
+  width: 800px;
+}
+
+@media (max-width: 576px) {
+  .login_page {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 48px auto 0 auto;
+  }
+}
+
+.login form {
+  margin-left: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (max-width: 576px) {
+  .login form {
+    margin-left: 0;
+  }
+}
+
+.login form h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 576px) {
+  .login form h2 {
+    font-size: 1.25rem;
+    text-align: center;
+  }
+}
+
+.login form label {
+  font-size: 0.875rem;
+  font-weight: bold;
+  margin: 16px 0 4px 0;
+}
+
+.login form input {
+  font-size: 1rem;
+  font-weight: normal;
+  border: none;
+  border-radius: 10px;
+  width: 304px;
+  padding: 12px 16px;
+  margin: 4px 0;
+}
+
+.login form input:focus {
+  outline: 3px solid #fff;
+}
+
+.login form input::-webkit-input-placeholder {
+  color: #9F9A91;
+  font-size: 1rem;
+}
+
+.login form input:-ms-input-placeholder {
+  color: #9F9A91;
+  font-size: 1rem;
+}
+
+.login form input::-ms-input-placeholder {
+  color: #9F9A91;
+  font-size: 1rem;
+}
+
+.login form input::placeholder {
+  color: #9F9A91;
+  font-size: 1rem;
+}
+
+.login form .btn-submit {
+  width: 128px;
+  height: 48px;
+  border: none;
+  border-radius: 10px;
+  background: #333333;
+  color: #fff;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin: 24px 0;
+  font-weight: bold;
+}
+
+.login form span {
+  margin: 4px 0 16px 0;
+  color: #d87355;
+  font-size: 0.875rem;
+}
+
+.login form a {
+  display: block;
+  color: #333333;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+}
+
+.signUp_page {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 87px auto;
+  width: 800px;
+}
+
+@media (max-width: 576px) {
+  .signUp_page {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 48px auto 0 auto;
+  }
+}
+
+.todoList_page h1 {
+  font-size: 48px;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+nav h1 a {
+  width: 243px;
+  height: 39px;
+  background: url("../img/logo.svg") no-repeat;
+  display: block;
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333333;
+  margin-left: 24px;
+}
+
+nav ul li a:hover {
+  color: #d87355;
+}
+
+nav ul li a span {
+  font-weight: bold;
+}
+
+@media (max-width: 576px) {
+  nav ul .todo_sm {
+    display: none;
+  }
+}
+
+.listContent {
+  width: 500px;
+  margin: 0 auto;
+}
+
+.inputBox {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  margin-bottom: 16px;
+  -webkit-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
+}
+
+.inputBox input {
+  background: #fff;
+  border: none;
+  border-radius: 10px;
+  position: relative;
+  width: 100%;
+  height: 47px;
+  font-size: 1rem;
+  padding-left: 16px;
+}
+
+.inputBox a {
+  display: block;
+  width: 40px;
+  height: 39px;
+  position: absolute;
+  background: #333333;
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 10px;
+  top: 4px;
+  right: 4px;
+  padding: 10px;
+}
+
+.list {
+  background: #fff;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
+}
+
+.list .tab {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.list .tab li {
+  width: 100%;
+}
+
+.list .tab li a {
+  display: block;
+  color: #9F9A91;
+  text-decoration: none;
+  line-height: 20px;
+  font-weight: bold;
+  text-align: center;
+  padding: 16px;
+  border-bottom: 2px solid #EFEFEF;
+}
+
+.list .tab li .active {
+  color: #333333;
+  border-bottom: 2px solid #333333;
+}
+
+.list .listItems {
+  padding-top: 23px;
+  padding-left: 24px;
+  padding-right: 17px;
+  padding-bottom: 32px;
+}
+
+.list .listItems .item {
+  margin-bottom: 8px;
+}
+
+.list .listItems .item li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 17px;
+}
+
+.list .listItems .item li label {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #E5E5E5;
+  padding-bottom: 15px;
+  color: #333333;
+  line-height: 20.27px;
+}
+
+.list .listItems .item li label input {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #9F9A91;
+  border-radius: 5px;
+  margin-right: 16px;
+}
+
+.list .listItems .item li a {
+  margin-left: 17px;
+  display: block;
+  font-size: 14px;
+  color: #333333;
+}
+
+.list .listFooter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.list .listFooter p {
+  color: #333333;
+  font-size: 0.875rem;
+}
+
+.list .listFooter a {
+  color: #9F9A91;
+  font-size: 0.875rem;
+  text-decoration: none;
+}
+/*# sourceMappingURL=all.css.map */
