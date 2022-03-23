@@ -1,0 +1,277 @@
+//loginPage
+.login_page {
+    justify-content: space-between;
+    align-items: center;
+    margin: 87px auto;
+    width: 800px;
+
+    @include mobile {
+        width: 100%;
+        flex-direction: column;
+        margin: 48px auto 0 auto;
+    }
+}
+
+//form
+.login {
+    form {
+        margin-left: 100px;
+        display: flex;
+        flex-direction: column;
+
+        @include mobile {
+            margin-left: 0;
+        }
+
+        h2 {
+            font-size: $h4-font-size;
+            font-weight: bold;
+            margin-bottom: 24px;
+
+            @include mobile {
+                font-size: $h5-font-size;
+                text-align: center;
+            }
+        }
+
+        label {
+            font-size: $font-size-sm;
+            font-weight: bold;
+            margin: 16px 0 4px 0;
+        }
+
+        input {
+            font-size: $h6-font-size;
+            font-weight: normal;
+            border: none;
+            border-radius: 10px;
+            width: 304px;
+            padding: 12px 16px;
+            margin: 4px 0;
+
+            &:focus {
+                outline: 3px solid $colors-success;
+            }
+
+            &::placeholder {
+                color: $colors-info;
+                font-size: $h6-font-size;
+            }
+        }
+
+        .btn-submit {
+            width: 128px;
+            height: 48px;
+            border: none;
+            border-radius: 10px;
+            background: #333333;
+            color: $colors-success;
+            align-self: center;
+            margin: 24px 0;
+            font-weight: bold;
+        }
+
+        span {
+            margin: 4px 0 16px 0;
+            color: #d87355;
+            font-size: $font-size-sm;
+        }
+
+        a {
+            display: block;
+            color: $colors-primary;
+            font-size: $h6-font-size;
+            font-weight: bold;
+            text-decoration: none;
+            text-align: center;
+        }
+    }
+}
+
+//sigupPage
+.signUp_page {
+    justify-content: space-between;
+    align-items: center;
+    margin: 87px auto;
+    width: 800px;
+
+    @include mobile {
+        width: 100%;
+        flex-direction: column;
+        margin: 48px auto 0 auto;
+    }
+}
+
+//todoListPage
+.todoList_page {
+    h1 {
+        font-size: 48px;
+    }
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+
+    h1 {
+        a{
+            width: 243px;
+            height: 39px;
+            background: url("../img/logo.svg") no-repeat;
+            @include hide-text;
+        }
+    }
+
+    ul {
+        display: flex;
+        align-items: center;
+        font-size: $h6-font-size;
+
+        li {
+            a{
+                text-decoration: none;
+                color: $colors-primary;
+                margin-left: 24px;
+
+                &:hover {
+                    color: #d87355;
+                }
+
+                span {
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .todo_sm {
+            @include mobile {
+                display: none;
+            }
+        }
+    }
+}
+
+.listContent {
+    width: 500px;
+    margin: 0 auto;
+}
+
+.inputBox {
+    width: 100%;
+    display: flex;
+    position: relative;
+    margin-bottom: 16px;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
+
+    input {
+        background: #fff;
+        border: none;
+        border-radius: 10px;
+        position: relative;
+        width: 100%;
+        height: 47px;
+        font-size: $font-size-base;
+        padding-left: 16px;
+    }
+    a {
+        display: block;
+        width: 40px;
+        height: 39px;
+        position: absolute;
+        background: $colors-primary;
+        color: white;
+        font-size: 20px;
+        text-decoration: none;
+        text-align: center;
+        border-radius: 10px;
+        top: 4px;
+        right: 4px;
+        padding: 10px;
+    }
+}
+
+.list {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
+
+    .tab {
+        display: flex;
+        justify-content: space-evenly;
+
+        li {
+            width: 100%;
+            a {
+                display: block;
+                color: $colors-info;
+                text-decoration: none;
+                line-height: 20px;
+                font-weight: bold;
+                text-align: center;
+                padding: 16px;
+                border-bottom: 2px solid #EFEFEF;
+            }
+            .active {
+                color: $colors-primary;
+                border-bottom: 2px solid $colors-primary;
+            }
+        }
+    }
+
+    .listItems {
+        padding-top: 23px;
+        padding-left: 24px;
+        padding-right: 17px;
+        padding-bottom: 32px;
+    
+        .item {
+            margin-bottom: 8px;
+            li {
+                display: flex;
+                align-items: center;
+                margin-bottom: 17px;
+                
+                label {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    border-bottom: 1px solid #E5E5E5;
+                    padding-bottom: 15px;
+                    color: $colors-primary;
+                    line-height: 20.27px;
+                    
+                    input {
+                        width: 20px;
+                        height: 20px;
+                        border: 1px solid $colors-info;
+                        border-radius: 5px;
+                        margin-right: 16px;
+                    }
+                }
+                a {
+                    margin-left: 17px;
+                    display: block;
+                    font-size: 14px;
+                    color: $colors-primary;
+                }
+            }
+    
+        }
+    }
+
+    .listFooter {
+        display: flex;
+        justify-content: space-between;
+    
+        p {
+            color: $colors-primary;
+            font-size: $font-size-sm;
+        }
+    
+        a {
+            color: $colors-info;
+            font-size: $font-size-sm;
+            text-decoration: none;
+        }
+    }
+}
