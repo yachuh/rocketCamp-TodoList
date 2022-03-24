@@ -1,7 +1,10 @@
-@import "./pages/reset";
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
-@import "./pages/variables";
-@import "./pages/mixin";
+@import "reset";
+@import "variables";
+@import "mixin";
 
-@import "./pages/layout";
-@import "./pages/main";
+@import "base";
+@import "layout";
+@import "components";
+@import "pages/main";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');

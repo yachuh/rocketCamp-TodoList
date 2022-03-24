@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,77 +12,82 @@
     <link rel="stylesheet" href="css/all.css">
     <title>ToDo List</title>
 </head>
-<body>
-    <!-- login_page -->
-    <div class="login_page flex">
-        <header class="flex">
-            <h1><a href="#">ONLINE TODO LIST</a></h1>
-            <div class="workImg"><img src="./img/work.svg" alt="workImg"></div>
-        </header>
-        <div class="login">
-            <form action="index.html">
-                <h2>最實用的線上代辦事項服務</h2>
-                <label for="email">Email</label>
-                <input type="text" id="email" name="email" placeholder="請輸入 email" required>
-                <span>此欄位不可留空</span>
-                <label for="pwd">密碼</label>
-                <input type="password" name="pwd" id="pwd" placeholder="請輸入密碼" required>
-                <input type="submit" value="登入" class="btn-submit">
-                <a href="./signup.html">註冊帳號</a>
-            </form>
-        </div>
-    </div>
 
-    <!-- sign up -->
-    <div class="signUp_page flex">
-        <header class="flex">
+<body class="bg-yellow">
+    <header class="container">
+        <nav class="flex">
             <h1><a href="#">ONLINE TODO LIST</a></h1>
-            <div class="workImg"><img src="./img/work.svg" alt="workImg"></div>
-        </header>
-        <div class="login">
-            <form action="index.html">
-                <h2>註冊帳號</h2>
-                <label for="email">Email</label>
-                <input type="text" id="email" name="email" placeholder="請輸入 email" required>
-                <label for="name">您的暱稱</label>
-                <input type="text" name="name" id="name" placeholder="請輸入您的暱稱">
-                <label for="pwd">密碼</label>
-                <input type="password" name="pwd" id="pwd" placeholder="請輸入密碼" required>
-                <label for="pwd">再次輸入密碼</label>
-                <input type="password" name="pwd" id="pwd" placeholder="請再次輸入密碼" required>
-                <input type="submit" value="註冊帳號" class="btn-submit">
-                <a href="./signup.html">登入</a>
-            </form>
-        </div>
-    </div>
-
-    <!-- ToDo List -->
-    <div class="todoList_page">
-        <nav>
-            <h1><a href="#">ONLINE TODO LIST</a></h1>
-            <ul>
-                <li class="todo_sm"><a href="#"><span>王小明的代辦</span></a></li>
+            <ul class="flex">
+                <li class="d-m-n"><a href="#"><span class="text-bold">王小明的代辦</span></a></li>
                 <li><a href="#">登出</a></li>
             </ul>
         </nav>
-        <div class="listContent">
-            <div class="inputBox">
+    </header>
+    <!-- login_page -->
+    <div class="container login flex">
+        <div class="sideBanner">
+            <a href="#"><img class="logoImg" src="./img/logo_lg.svg" alt="logoImg"></a>
+            <img class="d-m-n" src="./img/work.svg" alt="workImg">
+        </div>
+        <form class="loginForm" action="index.html">
+            <h2 class="ft-title">最實用的線上代辦事項服務</h2>
+            <label for="email">Email
+                <input class="input-text" type="text" id="email" name="email" placeholder="請輸入 email" required>
+                <span class="text-alert">此欄位不可留空</span>
+            </label>
+            <label for="pwd">密碼
+                <input class="input-text" type="password" name="pwd" id="pwd" placeholder="請輸入密碼" required>
+            </label>
+            <input type="submit" value="登入" class="btn-submit">
+            <a href="./index.html">註冊帳號</a>
+        </form>
+    </div>
+
+    <!-- sign up -->
+    <div class="container signup flex">
+        <div class="sideBanner">
+            <a href="#"><img class="logoImg" src="./img/logo_lg.svg" alt="logoImg"></a>
+            <img class="d-m-n" src="./img/work.svg" alt="workImg">
+        </div>
+        <form class="signupForm" action="index.html">
+            <h2 class="ft-title">註冊帳號</h2>
+            <label for="email">Email
+                <input class="input-text" type="text" id="email" name="email" placeholder="請輸入 email" required>
+            </label>
+            <label for="name">您的暱稱
+                <input class="input-text" type="text" name="name" id="name" placeholder="請輸入您的暱稱">
+            </label>
+            <label for="pwd">密碼
+                <input class="input-text" type="password" name="pwd" id="pwd" placeholder="請輸入密碼" required>
+            </label>
+            <label for="pwd">再次輸入密碼
+                <input class="input-text" type="password" name="pwd" id="pwd" placeholder="請再次輸入密碼" required>
+            </label>
+            <input type="submit" value="註冊帳號" class="btn-submit">
+            <a href="./index.html">登入</a>
+        </form>
+    </div>
+
+    <!-- ToDo List -->
+    <div class="container bg-half">
+        <div class="todos">
+            <div class="todos-inputBox">
                 <input type="text" placeholder="請輸入待辦事項">
                 <a href="#">
                     <i class="fa fa-plus"></i>
                 </a>
             </div>
-            <div class="list">
-                <ul class="tab">
-                    <li><a href="#" class="active">全部</a></li>
+            <div class="todos-list">
+                <ul class="tab flex">
+                    <li><a href="#">全部</a></li>
                     <li><a href="#">待完成</a></li>
                     <li><a href="#">已完成</a></li>
                 </ul>
-                <div class="listItems">
-                    <ul class="item">
+                <div class="todos-content">
+                    <ul class="todos-content-list">
                         <li>
-                            <label for="checkbox">
-                                <input type="checkbox" value="false">
+                            <label for="item1">
+                                <input type="checkbox" id="item1">
                                 <span>把冰箱發霉的檸檬拿去丟</span>
                             </label>
                             <a href="#">
@@ -89,8 +95,8 @@
                             </a>
                         </li>
                         <li>
-                            <label for="checkbox">
-                                <input type="checkbox" value="true">
+                            <label for="item2">
+                                <input type="checkbox" id="item2" checked>
                                 <span>打電話叫媽媽匯款給我</span>
                             </label>
                             <a href="#">
@@ -98,8 +104,8 @@
                             </a>
                         </li>
                         <li>
-                            <label for="checkbox">
-                                <input type="checkbox" value="false">
+                            <label for="item3">
+                                <input type="checkbox" id="item3">
                                 <span>整理電腦資料夾</span>
                             </label>
                             <a href="#">
@@ -107,17 +113,17 @@
                             </a>
                         </li>
                         <li>
-                            <label for="checkbox">
-                                <input type="checkbox" value="false">
-                                <span>繳電費水費瓦斯費</span>
+                            <label for="item4">
+                                <input type="checkbox" id="item4">
+                                <span>繳水電費瓦斯費</span>
                             </label>
                             <a href="#">
                                 <i class="fa fa-times"></i>
                             </a>
                         </li>
                         <li>
-                            <label for="checkbox">
-                                <input type="checkbox" value="false">
+                            <label for="item5">
+                                <input type="checkbox" id="item5">
                                 <span>約vicky禮拜三泡溫泉</span>
                             </label>
                             <a href="#">
@@ -125,8 +131,8 @@
                             </a>
                         </li>
                         <li>
-                            <label for="checkbox">
-                                <input type="checkbox" value="false">
+                            <label for="item6">
+                                <input type="checkbox" id="item6">
                                 <span>約ada禮拜四吃晚餐</span>
                             </label>
                             <a href="#">
@@ -134,13 +140,13 @@
                             </a>
                         </li>
                     </ul>
-                    <div class="listFooter">
+                    <div class="todos-content-footer flex">
                         <p> 5 個已完成項目</p>
                         <a href="#">清除已完成項目</a>
                     </div>
                 </div>
             </div>
-        </div>      
+        </div>
     </div>
 </body>
 </html>
