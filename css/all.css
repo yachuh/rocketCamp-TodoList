@@ -69,15 +69,21 @@ html {
   height: 100%;
 }
 
-body {
-  background: #FFD370;
+@media (max-width: 576px) {
+  .d-m-n {
+    display: none;
+  }
+}
+
+html {
   font-family: "Noto Sans TC";
+  color: #333333;
   margin: 0 auto;
-  width: 70%;
 }
 
 img {
   width: 100%;
+  vertical-align: middle;
 }
 
 .flex {
@@ -86,70 +92,99 @@ img {
   display: flex;
 }
 
-header {
-  width: 386px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.bg-yellow {
+  background-color: #FFD370;
+}
+
+.bg-half {
+  background-image: linear-gradient(175deg, #FFD370 60%, #fff 40%);
+}
+
+.ft-title {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 @media (max-width: 576px) {
-  header {
-    width: 100%;
+  .ft-title {
+    font-size: 1.25rem;
+    text-align: center;
   }
 }
 
-header h1 {
-  margin-bottom: 21px;
+.text-alert {
+  color: #d87355;
+  font-size: 0.875rem;
 }
 
-header h1 a {
-  width: 313px;
-  height: 47px;
-  background: url(../img/logo_lg.svg) no-repeat;
+.text-bold {
+  font-weight: bold;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+header {
+  width: 90%;
+}
+
+header nav {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+header nav h1 a {
+  width: 243px;
+  height: 37px;
+  background: url(../img/logo.svg) no-repeat;
   display: block;
   text-indent: 101%;
   overflow: hidden;
   white-space: nowrap;
 }
 
-@media (max-width: 576px) {
-  .workImg {
-    display: none;
-  }
-}
-
-.login_page {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+header nav ul {
+  font-size: 1rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 87px auto;
-  width: 800px;
+}
+
+header nav ul li a {
+  display: block;
+  text-decoration: none;
+  color: #333333;
+  text-align: center;
+  padding: 0px 10px;
+  margin: 0px 2px;
+}
+
+header nav ul li a:hover {
+  color: #d87355;
+}
+
+.sideBanner {
+  width: 386px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sideBanner .logoImg {
+  margin-bottom: 20px;
 }
 
 @media (max-width: 576px) {
-  .login_page {
-    width: 100%;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    margin: 48px auto 0 auto;
+  .sideBanner {
+    max-width: 304px;
   }
 }
 
-.login form {
-  margin-left: 100px;
+form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -159,66 +194,54 @@ header h1 a {
           flex-direction: column;
 }
 
-@media (max-width: 576px) {
-  .login form {
-    margin-left: 0;
-  }
-}
-
-.login form h2 {
-  font-size: 1.5rem;
-  font-weight: bold;
+form .ft-title {
   margin-bottom: 24px;
 }
 
-@media (max-width: 576px) {
-  .login form h2 {
-    font-size: 1.25rem;
-    text-align: center;
-  }
-}
-
-.login form label {
+form label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 4px;
   font-size: 0.875rem;
   font-weight: bold;
-  margin: 16px 0 4px 0;
+  margin-bottom: 16px;
 }
 
-.login form input {
+form .input-text {
   font-size: 1rem;
   font-weight: normal;
   border: none;
   border-radius: 10px;
   width: 304px;
   padding: 12px 16px;
-  margin: 4px 0;
 }
 
-.login form input:focus {
-  outline: 3px solid #fff;
-}
-
-.login form input::-webkit-input-placeholder {
+form .input-text::-webkit-input-placeholder {
   color: #9F9A91;
   font-size: 1rem;
 }
 
-.login form input:-ms-input-placeholder {
+form .input-text:-ms-input-placeholder {
   color: #9F9A91;
   font-size: 1rem;
 }
 
-.login form input::-ms-input-placeholder {
+form .input-text::-ms-input-placeholder {
   color: #9F9A91;
   font-size: 1rem;
 }
 
-.login form input::placeholder {
+form .input-text::placeholder {
   color: #9F9A91;
   font-size: 1rem;
 }
 
-.login form .btn-submit {
+form .btn-submit {
   width: 128px;
   height: 48px;
   border: none;
@@ -228,26 +251,24 @@ header h1 a {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  margin: 24px 0;
+  text-align: center;
   font-weight: bold;
+  cursor: pointer;
+  margin: 8px 0;
 }
 
-.login form span {
-  margin: 4px 0 16px 0;
-  color: #d87355;
-  font-size: 0.875rem;
-}
-
-.login form a {
+form a {
   display: block;
   color: #333333;
   font-size: 1rem;
   font-weight: bold;
   text-decoration: none;
   text-align: center;
+  margin-top: 16px;
 }
 
-.signUp_page {
+.login {
+  width: 800px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -255,81 +276,76 @@ header h1 a {
       -ms-flex-align: center;
           align-items: center;
   margin: 87px auto;
-  width: 800px;
 }
 
 @media (max-width: 576px) {
-  .signUp_page {
+  .login {
     width: 100%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin: 48px auto 0 auto;
+    margin: 0 auto;
+    padding: 48px 31px;
   }
 }
 
-.todoList_page h1 {
-  font-size: 48px;
-}
-
-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-bottom: 40px;
-}
-
-nav h1 a {
-  width: 243px;
-  height: 39px;
-  background: url("../img/logo.svg") no-repeat;
-  display: block;
-  text-indent: 101%;
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 1rem;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: #333333;
-  margin-left: 24px;
-}
-
-nav ul li a:hover {
-  color: #d87355;
-}
-
-nav ul li a span {
-  font-weight: bold;
+.loginForm {
+  margin-left: 106px;
 }
 
 @media (max-width: 576px) {
-  nav ul .todo_sm {
-    display: none;
+  .loginForm {
+    margin-left: 0;
   }
 }
 
-.listContent {
-  width: 500px;
-  margin: 0 auto;
+.signup {
+  width: 800px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 87px auto;
 }
 
-.inputBox {
-  width: 100%;
+@media (max-width: 576px) {
+  .signup {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0 auto;
+    padding: 48px 31px;
+  }
+}
+
+.signupForm {
+  margin-left: 106px;
+}
+
+@media (max-width: 576px) {
+  .signupForm {
+    margin: 0 auto;
+  }
+}
+
+.todos {
+  width: 500px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
+
+@media (max-width: 576px) {
+  .todos {
+    width: 311px;
+  }
+}
+
+.todos-inputBox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -339,7 +355,7 @@ nav ul li a span {
           box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
 }
 
-.inputBox input {
+.todos-inputBox input {
   background: #fff;
   border: none;
   border-radius: 10px;
@@ -350,7 +366,7 @@ nav ul li a span {
   padding-left: 16px;
 }
 
-.inputBox a {
+.todos-inputBox a {
   display: block;
   width: 40px;
   height: 39px;
@@ -366,54 +382,49 @@ nav ul li a span {
   padding: 10px;
 }
 
-.list {
+.todos-list {
   background: #fff;
   border-radius: 10px;
   -webkit-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
           box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
+  font-size: 0.875rem;
 }
 
-.list .tab {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.tab {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
 }
 
-.list .tab li {
+.tab li {
   width: 100%;
 }
 
-.list .tab li a {
+.tab a {
   display: block;
   color: #9F9A91;
   text-decoration: none;
   line-height: 20px;
   font-weight: bold;
   text-align: center;
-  padding: 16px;
+  padding: 16px 0px;
   border-bottom: 2px solid #EFEFEF;
 }
 
-.list .tab li .active {
+.tab a:active {
   color: #333333;
   border-bottom: 2px solid #333333;
 }
 
-.list .listItems {
-  padding-top: 23px;
-  padding-left: 24px;
-  padding-right: 17px;
-  padding-bottom: 32px;
+.todos-content {
+  padding: 23px 16px 32px 16px;
 }
 
-.list .listItems .item {
+.todos-content .todos-content-list {
   margin-bottom: 8px;
 }
 
-.list .listItems .item li {
+.todos-content li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -423,50 +434,61 @@ nav ul li a span {
   margin-bottom: 17px;
 }
 
-.list .listItems .item li label {
-  width: 100%;
+.todos-content li label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   border-bottom: 1px solid #E5E5E5;
   padding-bottom: 15px;
+  margin-right: 17px;
   color: #333333;
   line-height: 20.27px;
+  cursor: pointer;
 }
 
-.list .listItems .item li label input {
+.todos-content li label input[type=checkbox] {
   width: 20px;
   height: 20px;
   border: 1px solid #9F9A91;
   border-radius: 5px;
   margin-right: 16px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-.list .listItems .item li a {
-  margin-left: 17px;
-  display: block;
-  font-size: 14px;
+.todos-content li label input[type=checkbox]:checked ~ span {
+  color: #9F9A91;
+  text-decoration: line-through;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.todos-content li a {
+  display: none;
   color: #333333;
+  padding-bottom: 15px;
 }
 
-.list .listFooter {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.todos-content li:hover a {
+  display: block;
+}
+
+.todos-content .todos-content-footer {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
-.list .listFooter p {
+.todos-content .todos-content-footer p {
   color: #333333;
   font-size: 0.875rem;
 }
 
-.list .listFooter a {
+.todos-content .todos-content-footer a {
   color: #9F9A91;
   font-size: 0.875rem;
   text-decoration: none;
