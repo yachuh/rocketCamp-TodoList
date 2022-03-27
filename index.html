@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="img/smallIcon.svg">
+    <script src="https://kit.fontawesome.com/0f3f38a034.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/all.css">
+    <title>ToDo List</title>
+</head>
+
+<body class="bg-yellow">
+    <header class="container">
+        <nav class="flex">
+            <h1><a href="#">ONLINE TODO LIST</a></h1>
+            <ul class="flex">
+                <li class="d-m-n"><a href="#"><span class="text-bold">王小明的代辦</span></a></li>
+                <li><a href="#">登出</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- login_page -->
+    <div class="container login flex">
+        <div class="sideBanner">
+            <a href="#"><img class="logoImg" src="./img/logo_lg.svg" alt="logoImg"></a>
+            <img class="d-m-n" src="./img/work.svg" alt="workImg">
+        </div>
+        <form class="loginForm" action="index.html">
+            <h2 class="ft-title">最實用的線上代辦事項服務</h2>
+            <label for="email">Email
+                <input class="input-text" type="text" id="email" name="email" placeholder="請輸入 email" required>
+                <span class="text-alert">此欄位不可留空</span>
+            </label>
+            <label for="pwd">密碼
+                <input class="input-text" type="password" name="pwd" id="pwd" placeholder="請輸入密碼" required>
+            </label>
+            <input type="submit" value="登入" class="btn-submit">
+            <a href="./index.html">註冊帳號</a>
+        </form>
+    </div>
+
+    <!-- sign up -->
+    <div class="container signup flex">
+        <div class="sideBanner">
+            <a href="#"><img class="logoImg" src="./img/logo_lg.svg" alt="logoImg"></a>
+            <img class="d-m-n" src="./img/work.svg" alt="workImg">
+        </div>
+        <form class="signupForm" action="index.html">
+            <h2 class="ft-title">註冊帳號</h2>
+            <label for="email">Email
+                <input class="input-text" type="text" id="email" name="email" placeholder="請輸入 email" required>
+            </label>
+            <label for="name">您的暱稱
+                <input class="input-text" type="text" name="name" id="name" placeholder="請輸入您的暱稱">
+            </label>
+            <label for="pwd">密碼
+                <input class="input-text" type="password" name="pwd" id="pwd" placeholder="請輸入密碼" required>
+            </label>
+            <label for="pwd">再次輸入密碼
+                <input class="input-text" type="password" name="pwd" id="pwd" placeholder="請再次輸入密碼" required>
+            </label>
+            <input type="submit" value="註冊帳號" class="btn-submit">
+            <a href="./index.html">登入</a>
+        </form>
+    </div>
+
+    <!-- ToDo List -->
+    <div class="container bg-half">
+        <div class="todos">
+            <div class="todos-inputBox">
+                <input type="text" placeholder="請輸入待辦事項">
+                <a href="#">
+                    <i class="fa fa-plus"></i>
+                </a>
+            </div>
+            <div class="todos-list">
+                <ul class="tab flex">
+                    <li><a href="#">全部</a></li>
+                    <li><a href="#">待完成</a></li>
+                    <li><a href="#">已完成</a></li>
+                </ul>
+                <div class="todos-content">
+                    <ul class="todos-content-list">
+                        <li>
+                            <label for="item1">
+                                <input type="checkbox" id="item1">
+                                <span>把冰箱發霉的檸檬拿去丟</span>
+                            </label>
+                            <a href="#">
+                                <i class="fa fa-times"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <label for="item2">
+                                <input type="checkbox" id="item2" checked>
+                                <span>打電話叫媽媽匯款給我</span>
+                            </label>
+                            <a href="#">
+                                <i class="fa fa-times"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <label for="item3">
+                                <input type="checkbox" id="item3">
+                                <span>整理電腦資料夾</span>
+                            </label>
+                            <a href="#">
+                                <i class="fa fa-times"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <label for="item4">
+                                <input type="checkbox" id="item4">
+                                <span>繳水電費瓦斯費</span>
+                            </label>
+                            <a href="#">
+                                <i class="fa fa-times"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <label for="item5">
+                                <input type="checkbox" id="item5">
+                                <span>約vicky禮拜三泡溫泉</span>
+                            </label>
+                            <a href="#">
+                                <i class="fa fa-times"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <label for="item6">
+                                <input type="checkbox" id="item6">
+                                <span>約ada禮拜四吃晚餐</span>
+                            </label>
+                            <a href="#">
+                                <i class="fa fa-times"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="todos-content-footer flex">
+                        <p> 5 個已完成項目</p>
+                        <a href="#">清除已完成項目</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
