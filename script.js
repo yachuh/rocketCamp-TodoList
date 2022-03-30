@@ -79,8 +79,7 @@ todoList.addEventListener("click", function(event){
     //     alert("yoyoyoy");
     // }
     if (event.target.getAttribute("class") === "fa fa-times") {
-        let id = event.target.parentElement.getAttribute("data-id");
-        
+        let id = event.target.parentElement.parentElement.getAttribute("data-id");
         var requestOptions = {
             method: 'DELETE',
             redirect: 'follow'
